@@ -1,0 +1,36 @@
+body
+{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #eee7a7;
+}
+a{
+    position: relative;
+    text-align: left;
+    display: inline-block;
+    flex-direction: column;
+    padding: 0px 0px;
+    margin: 0px 0px;
+    text-decoration: none;
+    color: white;
+}
+button{
+    background-color: rgb(57, 57, 128);
+    display: block;
+    border: none;
+    font-family: sans-serif;
+    
+    height: 30px;
+    width: 150px;
+    border-radius: 40px;
+}
+
+.teamplayers a{
+    color: magenta;
+}
+.playerlogo{
+    border-radius: 50%;
+  }

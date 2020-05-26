@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCORE SHEET</title>
+        {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'table.css' %}">
+</head>
+<body>
+<table border = "1" width = "400" height = "150">
+
+<tr>
+            <th>Teams</th>
+            <th>Winner</th>
+            <th>Points</th>
+         </tr>
+
+
+{% for score in scorecard %}
+
+<tr>
+            <td>{{score.match.team1}} vs {{score.match.team2}}</td>
+            <td>{{score.match.winner}}</td>
+            <td><input type="number" value="{{score.points}}" readonly ></td>
+</tr>
+
+{% endfor %}
+    </table>
+</body>
+</html>

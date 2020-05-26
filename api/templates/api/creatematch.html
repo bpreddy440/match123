@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CREATE MATCH</title>
+    <script type="text/javascript">
+        function pointValidate()
+        {
+        var point=document.getElementById('points')
+        if (points.value<0)
+            {
+            alert('invalid points rewarded');
+            return false;
+            }
+        else
+            {
+            alert('successfully stored');
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+<form action="" method="post" onsubmit="return pointValidate()">
+    {% csrf_token %}
+    <h1> SELECT THE WINNER</h1>
+    Winner :<select name="winner">
+        <option>{{team1}}</option>
+        <option>{{team2}}</option>
+    </select>
+    <br><br>
+    Points: <input type="text" value="1" name="points" id="points"><br>
+    Description: <input type="text" name="description"><br>
+    <input type=submit value="winner" >
+</form>
+</body>
+</html>

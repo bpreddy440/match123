@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+            {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'details.css' %}">
+</head>
+<body>
+{{team.name}}
+{% for player in team.player_set.all %}
+<ul class="teamplayers">
+    <button><a href="{% url 'api:playerdetails' team.id player.id %}">{{player}}</a></button>
+</ul>
+
+{% endfor %}
+</body>
+</html>

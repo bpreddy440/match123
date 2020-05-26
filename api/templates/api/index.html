@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+</head>
+<body>
+{% if team_list %}
+    <div class="index">
+        {% for team in team_list %}
+        <a href="{% url 'api:teamdetails' team.id %}">{{team.name}}</a><br>
+        {% endfor %}
+        {% else %}
+        <h1>No teams Available </h1>
+        {% endif %}
+    </div>
+<br><br><br>
+<a href="{% url 'api:creatematch' %}">CREATE A MATCH</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PLAYER DETAILS</title>
+            {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'details.css' %}">
+</head>
+<body>
+<img class="playerlogo" src="{{ player.imageUri.url }}" width="200" height="200"/><br>
+<ul>
+    <li><h1 style = "text-transform:capitalize;"> {{player.lastName}} {{player.firstName}}</h1></li>
+
+</ul>
+
+</body>
+</html>

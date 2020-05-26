@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HIGH SCORES</title>
+    {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'table.css' %}">
+
+</head>
+<body>
+<table border = "1" width = "400" height = "150">
+    <tr>
+        <th>Team</th>
+        <th>Points</th>
+    </tr>
+{% for score,value in scorecard.items %}
+    <tr>
+        <td>{{score}}</td>
+        <td>{{value}}</td>
+    </tr>
+{% endfor %}
+</table>
+</body>
+</html>
